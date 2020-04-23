@@ -1,0 +1,156 @@
+:root {
+    --white: #fff;
+    --secondary-color: #DB5155;
+    --container: 117rem;
+    --warapper: 192rem; 
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+#wrapper {
+    max-width: var(--warapper);
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes translate__content {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn {
+    font-size: 1.6rem;
+    color: var(--white);
+    font-weight: 500;
+    padding: 1.5rem 2rem;
+    border-radius: 0.4rem;
+}
+
+.btn--primary {
+    background-color: rgb(242,84,84);
+}
+
+.btn--primary:hover {
+    background-color: #F38383;
+}
+
+
+
+.heading {
+    position: relative;
+    text-align: center;
+}
+
+.heading__title h2  {
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: #282828;
+    margin-bottom: 5rem;
+}
+
+.heading__title-white h2 {
+    color: var(--white);
+}
+
+.text__shadow{
+    position: absolute;
+    font-size: 7.2rem;
+    font-weight: bold;
+    opacity: 0.06;
+    top: -3.2rem; 
+    left: 50%;
+    transform: translateX(-50%);  
+}
+
+.under__title {
+    display: block;
+    margin-top: 1rem;
+    width: 10%;
+    height: 0.1rem;
+    background-color: #000;
+    position: absolute;
+    top: 3.6rem;
+    left: 50%;
+    transform: translateX(-50%);  
+    transition: width 0.2s linear;
+}
+
+.under__title-white {
+    background-color: var(--white);
+}
+
+.heading__title:hover .under__title {
+    width: 20%;
+}
+
+@media only screen and (min-width: 1023px) {
+    .under__title {
+        width: 4%;
+    }
+
+    .heading__title:hover .under__title {
+        width: 6%;
+    }
+}
+
+.heading__desc {
+    font-size: 1.6rem;
+    color: #9D9D9D;
+    max-width: 60rem;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.heading__desc-white {
+    color: #E5E7E5;
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
